@@ -11,6 +11,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Generate release tag
-        uses: amitsingh-007/next-release-tag@v1.0.0
+        uses: mosfetlang/dev-tagger-action@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tag-prefix: 'my-tag-'
+          origin: 'origin2'
