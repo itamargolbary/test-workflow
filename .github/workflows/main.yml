@@ -1,22 +1,16 @@
-name: Generate tag
+name: Create Release
 
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
-  build:
-    name: Generate tag
+  deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@master
-        with:
-          fetch-depth: '0'
 
-      - name: Bump version and push tag
-        uses: ChloePlanet/github-tag-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WITH_V: true
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v2
+
+      - name: Generate release tag
+        uses: amitsingh-007/next-release-tag@v1.0.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
