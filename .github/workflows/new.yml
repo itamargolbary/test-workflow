@@ -1,0 +1,14 @@
+name: Another workflow on tag generated
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  myJob:
+    name: On tag generated
+    runs-on: ubuntu-latest
+    steps:
+      - name: print tag
+      - run: echo ${GITHUB_REF#refs/tags/}
