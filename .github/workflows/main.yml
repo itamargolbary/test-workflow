@@ -7,9 +7,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout branch
-        uses: actions/checkout@v2
-
       - name: Generate release tag
         uses: mosfetlang/dev-tagger-action@v1
         with:
