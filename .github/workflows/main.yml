@@ -13,5 +13,5 @@ jobs:
       - name: Generate release tag
         uses: mosfetlang/dev-tagger-action@v1
         with:
-          tag-prefix: 'my-tag-'
-          origin: 'origin2'
+          tag-prefix: 'v'
+          origin: 'origin'
