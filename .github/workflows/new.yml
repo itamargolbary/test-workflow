@@ -10,5 +10,5 @@ jobs:
     name: On tag generated
     runs-on: ubuntu-latest
     steps:
-      - name: print tag
-      - run: echo ${GITHUB_REF#refs/tags/}
+      - name: Print tag
+        run: echo ${GITHUB_REF#refs/tags/}
