@@ -15,3 +15,7 @@ jobs:
         with:
           tag-prefix: 'v'
           origin: 'origin'
+
+      - name: Print tag
+        run: echo ${GITHUB_REF#refs/tags/}
+
